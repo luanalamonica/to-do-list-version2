@@ -14,11 +14,8 @@ Aplicação de lista de tarefas feita com **HTML**, **CSS** (tema dark) e **Type
 
 ## 📸 Preview
 
-> Coloque o print que você me mandou dentro da pasta do projeto (por exemplo em `assets/`) e ajuste o caminho da imagem abaixo, se quiser.
+![To-Do List Preview]([./assets/todo-list-preview.png](https://github.com/luanalamonica/to-do-list-version2/blob/main/home.png?raw=true))
 
-```md
-![To-Do List Preview](./assets/todo-list-preview.png)
-```
 
 ---
 
