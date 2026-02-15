@@ -6,7 +6,7 @@ Projeto To-Do List com TypeScript, arquitetura orientada a objetos e boas práti
 
 ### 1. Instale dependências:
 
-<h1 align="center">To-Do List</h1>
+<h1>To-Do List</h1>
 
 Aplicação de lista de tarefas feita com **HTML**, **CSS** (tema dark) e **TypeScript** orientado a objetos, com persistência em **localStorage** e filtros de tarefas.
 
