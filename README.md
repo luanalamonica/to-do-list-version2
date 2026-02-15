@@ -2,6 +2,8 @@
 
 Projeto To-Do List com TypeScript, arquitetura orientada a objetos e boas práticas.
 
+- Site publicado: https://to-doo-lisstt.netlify.app/
+
 ## Como usar
 
 ### 1. Instale dependências:
@@ -14,7 +16,6 @@ Aplicação de lista de tarefas feita com **HTML**, **CSS** (tema dark) e **Type
 
 ## 📸 Preview
 
-- Site publicado: https://to-doo-lisstt.netlify.app/
 ![To-Do List Preview](https://github.com/luanalamonica/to-do-list-version2/blob/main/home.png?raw=true)
 
 ---
