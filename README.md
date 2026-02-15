@@ -14,8 +14,7 @@ Aplicação de lista de tarefas feita com **HTML**, **CSS** (tema dark) e **Type
 
 ## 📸 Preview
 
-![To-Do List Preview] (https://github.com/luanalamonica/to-do-list-version2/blob/main/home.png?raw=true)
-
+![To-Do List Preview](https://github.com/luanalamonica/to-do-list-version2/blob/main/home.png?raw=true)
 
 ---
 
