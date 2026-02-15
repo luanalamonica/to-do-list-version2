@@ -6,94 +6,117 @@ Projeto To-Do List com TypeScript, arquitetura orientada a objetos e boas práti
 
 ### 1. Instale dependências:
 
-```bash
-npm install
+<h1 align="center">To-Do List</h1>
+
+Aplicação de lista de tarefas feita com **HTML**, **CSS** (tema dark) e **TypeScript** orientado a objetos, com persistência em **localStorage** e filtros de tarefas.
+
+---
+
+## 📸 Preview
+
+> Coloque o print que você me mandou dentro da pasta do projeto (por exemplo em `assets/`) e ajuste o caminho da imagem abaixo, se quiser.
+
+```md
+![To-Do List Preview](./assets/todo-list-preview.png)
 ```
 
-### 2. Compile TypeScript para JavaScript:
+---
 
-```bash
-npm run build
-```
+## ✨ Funcionalidades
 
-Isso gera `JS/first.js` a partir de `src/first.ts`.
+- Adicionar novas tarefas pelo campo de input ou tecla **Enter**.
+- Marcar tarefas como concluídas com o círculo à esquerda.
+- Editar o texto de uma tarefa com **duplo clique**.
+- Excluir tarefas com o botão **X** à direita.
+- Filtros de visualização: **All**, **Done** e **Pending**.
+- Salvamento automático das tarefas no **localStorage** (persistem ao recarregar a página).
+- Interface em tema escuro, centralizada, com fonte Inter.
 
-### 3. Abra no navegador:
+---
 
-- Duplo clique em `index.html` ou arraste para o navegador.
-- Force reload: **Ctrl+F5**.
+## 🛠 Tecnologias utilizadas
 
-## Desenvolvimento
+- **HTML5** – estrutura da página.
+- **CSS3** – estilização e layout do tema dark ([CSS/first.css](CSS/first.css)).
+- **TypeScript** – lógica da aplicação ([src/first.ts](src/first.ts)).
+- **LocalStorage** – persistência simples no navegador.
+- **npm + TypeScript Compiler (tsc)** – build do código.
 
-### Modo watch (recompila automaticamente):
+---
+
+## 🚀 Como rodar o projeto
+
+1. **Instalar as dependências**
+
+	```bash
+	npm install
+	```
+
+2. **Gerar o JavaScript a partir do TypeScript**
+
+	```bash
+	npm run build
+	```
+
+	Isso compila o arquivo [src/first.ts](src/first.ts) e gera [JS/first.js](JS/first.js).
+
+3. **Abrir no navegador**
+
+	- Abra o arquivo [index.html](index.html) clicando duas vezes ou arrastando para o navegador.
+	- Para garantir que não está usando cache, use **Ctrl + F5**.
+
+### Modo desenvolvimento (watch)
+
+Se quiser que o TypeScript seja recompilado automaticamente a cada alteração:
 
 ```bash
 npm run watch
 ```
 
-Deixe rodando enquanto edita o TypeScript.
+Deixe esse comando rodando enquanto edita os arquivos em `src/`.
 
-## Estrutura do projeto
+---
 
-```
+## 📂 Estrutura de pastas
+
+```bash
 To-Do List/
-├── index.html              ← Arquivo principal
+├── index.html              # Arquivo principal da aplicação
 ├── CSS/
-│   └── first.css          ← Estilos (tema escuro)
+│   └── first.css           # Estilos (tema escuro)
 ├── JS/
-│   └── first.js           ← Compilado (não editar manualmente)
+│   └── first.js            # Arquivo compilado (não editar direto)
 ├── src/
-│   ├── first.ts           ← Código principal (EDITAR AQUI)
-│   └── first.test.ts      ← Testes unitários
-├── tsconfig.json          ← Config TypeScript (strict mode)
-├── package.json           ← Scripts npm
-└── README.md              ← Este arquivo
+│   ├── first.ts            # Código TypeScript principal
+│   └── first.test.ts       # Arquivo reservado para testes
+├── tsconfig.json           # Configurações do TypeScript (strict mode)
+├── package.json            # Scripts npm e dependências
+└── README.md               # Documentação do projeto
 ```
 
-## Melhorias implementadas
+---
 
-✅ **Tipos e Interfaces**
-- Interface `ITask` para estrutura de tarefas
-- Interface `IDOMElements` para elementos do DOM
-- Tipos genéricos para maior segurança
+## 🧠 Detalhes técnicos
 
-✅ **Enums**
-- `FilterType` para tipos de filtro ('all' | 'done' | 'pending')
-- Evita typos e melhora autocomplete
+- Uso de **enum `FilterType`** para controlar os filtros (`all`, `done`, `pending`).
+- Interface **`ITask`** para tipar as tarefas salvas no localStorage.
+- Interface **`IDOMElements`** para tipar elementos do DOM usados pela aplicação.
+- Classe **`TodoApp`** encapsula toda a lógica da lista de tarefas.
+- Função **`parseStorageData`** garante que os dados vindos do localStorage são válidos.
+- Configuração de TypeScript com **`"strict": true`** para pegar erros em tempo de compilação.
 
-✅ **Classe e OOP**
-- `TodoApp`: classe que encapsula toda a lógica
-- Métodos privados/públicos com responsabilidades claras
-- Melhor manutenibilidade e testabilidade
+---
 
-✅ **Type Guards e Validações**
-- `parseStorageData()`: parse seguro de JSON com validação de tipo
-- `getDOMElements()`: valida presença de elementos do DOM
-- Tratamento robusto de erros com try/catch
+## 💡 Possíveis melhorias futuras
 
-✅ **Strict Mode**
-- Habilitado `"strict": true` em `tsconfig.json`
-- `noImplicitAny`, `strictNullChecks`, `strictFunctionTypes`
-- Detecta bugs em tempo de compilação
+- Adicionar prioridade, tags e data de vencimento às tarefas.
+- Criar contadores de tarefas totais, feitas e pendentes.
+- Implementar testes automatizados (ex.: Jest ou Vitest) em [src/first.test.ts](src/first.test.ts).
+- Adicionar animações suaves nas transições e feedback visual de erro no input.
 
-✅ **Logging e Debug**
-- Console.error/warn para ajudar no debug
-- Mensagens descritivas com prefixo `[TodoApp]`
+---
 
-✅ **Testes Unitários**
-- Arquivo `src/first.test.ts` com exemplos
-- Funções de teste para save/load, validações, tipos
+## 📄 Licença
 
-## Próximos passos
-
-- Integrar framework de testes (Jest/Vitest)
-- Adicionar funcionalidades: prioridades, tags, datas de vencimento
-- Extrair estilos CSS para componentes SCSS
-- Criar versão com componentes (Web Components ou framework)
-
-## Dicas rápidas
-
-- Se editar `src/first.ts`, rode `npm run build` para recompilar.
-- Verifique erros de tipo antes de compilar: TypeScript só roda no VSCode ou terminal.
-- Use `Ctrl+Shift+B` no VSCode para rodar build task (se configurado).
+Projeto criado para estudo/prática. Fique à vontade para clonar e adaptar.
 
