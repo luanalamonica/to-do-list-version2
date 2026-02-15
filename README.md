@@ -14,6 +14,7 @@ Aplicação de lista de tarefas feita com **HTML**, **CSS** (tema dark) e **Type
 
 ## 📸 Preview
 
+- Site publicado: https://to-doo-lisstt.netlify.app/
 ![To-Do List Preview](https://github.com/luanalamonica/to-do-list-version2/blob/main/home.png?raw=true)
 
 ---
